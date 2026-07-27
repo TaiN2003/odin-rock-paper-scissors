@@ -3,7 +3,7 @@ function getHumanChoice() {
 }
 
 function getComputerChoice() {
-    let comChoice = Math.floor(Math.random() * 3 + 1); 
+    const comChoice = Math.floor(Math.random() * 3 + 1); 
     
     if (comChoice === 1) {
         return "Rock"; 
@@ -16,9 +16,10 @@ function getComputerChoice() {
     }
 }
 
+function playRound(humanChoice, computerChoice) {
+    const humanChoice = getHumanChoice();
+    const computerChoice = getComputerChoice();
+}
+
 let humScore = 0;
 let comScore = 0;
-
-console.log(getHumanChoice());
-
-console.log(getComputerChoice());
