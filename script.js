@@ -16,6 +16,9 @@ function getComputerChoice() {
     }
 }
 
+let humScore = 0;
+let comScore = 0;
+
 console.log(getHumanChoice());
 
 console.log(getComputerChoice());
