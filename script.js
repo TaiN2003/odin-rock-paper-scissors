@@ -17,9 +17,29 @@ function getComputerChoice() {
 }
 
 function playRound(humanChoice, computerChoice) {
-    const humanChoice = getHumanChoice();
-    const computerChoice = getComputerChoice();
+    let humScore = 0;
+    let comScore = 0;
+    
+    if (humanChoice === computerChoice) {
+        console.log("It's a tie.")
+    }
+    else if (humanChoice === "Rock" && computerChoice === "Scissors" || humanChoice === "Paper" && computerChoice === "Rock" || humanChoice === "Scissors" && computerChoice === "Paper") {
+        console.log("You win! " + humanChoice + " beats " + computerChoice + ".")
+        humScore++;
+        console.log(humScore);
+        console.log(comScore);
+    }
+    else {
+        console.log(("You lose! " + computerChoice + " beats " + humanChoice + "."))
+        comScore++;
+        console.log(humScore);
+        console.log(comScore);
+    }
 }
 
-let humScore = 0;
-let comScore = 0;
+const humanInput = getHumanChoice()
+const humanChoice = humanInput[0].toUpperCase() + humanInput.slice(1).toLowerCase();
+
+const computerChoice = getComputerChoice();
+
+playRound(humanChoice, computerChoice)
